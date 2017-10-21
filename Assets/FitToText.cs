@@ -11,10 +11,16 @@ public class FitToText : MonoBehaviour {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    public Vector3 a, b;
+    // Update is called once per frame
+    void Update()
+    {
         float height = text.rect.height + addition;
+        a = scaleStart * height;
+        b = a / 10;
         this.transform.localScale = scaleStart * height;
+        this.gameObject.GetComponent<ParticleSystem>().shape.scale.Set((b.x), (b.y), (b.z));
+        
     }
+
 }
