@@ -17,6 +17,7 @@ public class GazeGestureManager : MonoBehaviour
 
         // Set up a GestureRecognizer to detect Select gestures.
         recognizer = new GestureRecognizer();
+        
         recognizer.TappedEvent += (source, tapCount, ray) =>
         {
             // Send an OnSelect message to the focused object and its ancestors.
@@ -25,6 +26,9 @@ public class GazeGestureManager : MonoBehaviour
                 FocusedObject.SendMessageUpwards("OnSelect");
             }
         };
+
+
+
         recognizer.StartCapturingGestures();
     }
 

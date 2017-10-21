@@ -19,6 +19,12 @@ public class Node : MonoBehaviour
     // Called by GazeGestureManager when the user performs a Select gesture
     void OnSelect()
     {
+        
         Debug.Log("MEOW! (also you clicked on things)");
+    }
+
+    void Remove()
+    {
+        Debug.Log("And now we are removing things!! MEOW MUTHATRUCKAS");
     }
 }
