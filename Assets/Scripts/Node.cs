@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Node : MonoBehaviour
 {
@@ -17,4 +15,10 @@ public class Node : MonoBehaviour
     {
 		
 	}
+
+    // Called by GazeGestureManager when the user performs a Select gesture
+    void OnSelect()
+    {
+        Debug.Log("MEOW! (also you clicked on things)");
+    }
 }
