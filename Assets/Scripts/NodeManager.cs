@@ -11,7 +11,6 @@ public class NodeManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
     {
-        InteractionManager.InteractionSourcePressed += RemoveNode;
 	}
 	
 	// Update is called once per frame
@@ -25,8 +24,9 @@ public class NodeManager : MonoBehaviour
         return GameObject.Instantiate(NodePrefab,pos, Quaternion.identity);
     }
 
-    public Action<InteractionSourcePressedEventArgs> RemoveNode =
-        (InteractionSourcePressedEventArgs pressed) => {
-            Debug.Log(pressed.state.source);
-        };
+    public void RemoveNode(GameObject node)
+    {
+        GameObject.Destroy(node);
+        Debug.Log("Object removed!!(MEE-OW(th) That's right!");
+    }
 }
