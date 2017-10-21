@@ -2,13 +2,13 @@
 
 public class WorldCursor : MonoBehaviour
 {
-    private MeshRenderer meshRenderer;
+    private GameObject cursor;
 
     // Use this for initialization
     void Start()
     {
         // Grab the mesh renderer that's on the same object as this script.
-        meshRenderer = this.gameObject.GetComponentInChildren<MeshRenderer>();
+        cursor = this.gameObject.transform.Find("crosshair1").gameObject;
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class WorldCursor : MonoBehaviour
         {
             // If the raycast hit a hologram...
             // Display the cursor mesh.
-            meshRenderer.enabled = true;
+            cursor.SetActive(true);
 
             // Move thecursor to the point where the raycast hit.
             this.transform.position = hitInfo.point;
@@ -36,7 +36,7 @@ public class WorldCursor : MonoBehaviour
         else
         {
             // If the raycast did not hit a hologram, hide the cursor mesh.
-            meshRenderer.enabled = false;
+            cursor.SetActive(false);
         }
     }
 }

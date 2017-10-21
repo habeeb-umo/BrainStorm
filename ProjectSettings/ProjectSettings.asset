@@ -527,7 +527,7 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: BrainStorm
   metroPackageVersion: 
-  metroCertificatePath: C:\Users\hpwsvr\Desktop\ControlTheCloud\BrainStorm\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets\WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
