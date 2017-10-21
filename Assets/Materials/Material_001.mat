@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Material_002
+  m_Name: Material_001
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 1
@@ -68,12 +68,10 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 1
-
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 0.511}
-    - _EmissionColor: {r: 0.1, g: 0.083823524, b: 0, a: 0}
-
+    - _Color: {r: 1, g: 1, b: 1, a: 0.4105}
+    - _EmissionColor: {r: 0.8897059, g: 1, b: 1, a: 0}
