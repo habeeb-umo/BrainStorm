@@ -7,12 +7,12 @@ public class SpeechManager : MonoBehaviour
 {
     KeywordRecognizer keywordRecognizer = null;
     Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
+    public NodeManager NodeManager;
 
     // Use this for initialization
     void Start()
     {
-        
-
+        NodeManager = FindObjectOfType<NodeManager>();
         keywords.Add("Select", () =>
         {
             var focusObject = GazeGestureManager.Instance.FocusedObject;
@@ -21,6 +21,13 @@ public class SpeechManager : MonoBehaviour
                 // Call the OnDrop method on just the focused object.
                 focusObject.SendMessage("OnSelect");
             }
+        });
+
+        keywords.Add("Add Node", () =>
+        {
+            var nodePlace = Camera.main.transform.forward + new Vector3(0,0,20);
+            NodeManager.CreateNode(nodePlace);
+            Debug.Log("MEOW! Also CREATED A NODE.");
         });
 
         // Tell the KeywordRecognizer about our keywords.
