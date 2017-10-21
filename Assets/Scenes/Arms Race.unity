@@ -112,6 +112,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+
 --- !u!1001 &498413414
 Prefab:
   m_ObjectHideFlags: 0
@@ -170,6 +171,8 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 1085b2081f0c99345a13365aa2707f36, type: 3}
   m_PrefabInternal: {fileID: 498413414}
+
+
 --- !u!1 &501036026
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,6 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 570814029}
   - component: {fileID: 570814028}
+  - component: {fileID: 570814030}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -277,6 +281,7 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &913255877
+
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -331,13 +336,14 @@ Prefab:
   m_ParentPrefab: {fileID: 100100000, guid: 73af3acfe61b31c4faa1f8acf1103406, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &1167381420 stripped
+
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 1085b2081f0c99345a13365aa2707f36, type: 3}
   m_PrefabInternal: {fileID: 498413414}
 --- !u!122 &1167381424
 Halo:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 100002, guid: 9094cf1b2ec9d5c408f7588c4f65b996, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1167381420}
   m_Enabled: 1
@@ -345,6 +351,7 @@ Halo:
     serializedVersion: 2
     rgba: 4286611584
   m_Size: 0.05
+
 --- !u!1 &1757957210
 GameObject:
   m_ObjectHideFlags: 0
