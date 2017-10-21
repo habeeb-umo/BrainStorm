@@ -367,7 +367,7 @@ MonoBehaviour:
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   IsGlobalListener: 1
-  PersistentKeywords: 1
+  PersistentKeywords: 0
 --- !u!1 &1167381420 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 1085b2081f0c99345a13365aa2707f36, type: 3}
