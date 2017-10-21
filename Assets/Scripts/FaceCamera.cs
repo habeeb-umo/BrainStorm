@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[ExecuteInEditMode]
 public class FaceCamera : MonoBehaviour {
     GameObject cmer; 
 	// Use this for initialization
