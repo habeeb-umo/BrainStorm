@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TheBestScene.unity
+    guid: 6287ef68ed4212848ac3a5b5c8b96f2c
