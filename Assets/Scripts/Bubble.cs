@@ -26,9 +26,4 @@ public class  Bubble : MonoBehaviour
     {
         Debug.Log("And now we are removing things!! MEOW MUTHATRUCKAS");
     }
-
-    public void InstantiateNewBubble()
-    {
-
-    }
 }

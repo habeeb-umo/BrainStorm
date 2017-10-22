@@ -5,6 +5,6 @@ public class BubbleSpawner : MonoBehaviour
     public void InstantiateNewBubble(Transform clickerTrans)
     {
         GameObject.Instantiate(BubbleObject, clickerTrans.position, Quaternion.identity);
-        Debug.Log("BUBBLEESSSSSSSSSS(meow)SSS");
+        //Debug.Log("BUBBLEESSSSSSSSSS(meow)SSS");
     }
 }

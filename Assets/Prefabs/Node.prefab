@@ -564,7 +564,7 @@ MonoBehaviour:
   PlaceParentOnTap: 1
   ParentGameObjectToPlace: {fileID: 1442035970682840}
   IsBeingPlaced: 0
-  AllowMeshVisualizationControl: 1
+  AllowMeshVisualizationControl: 0
   UseColliderCenter: 0
 --- !u!114 &114386578814813226
 MonoBehaviour:
