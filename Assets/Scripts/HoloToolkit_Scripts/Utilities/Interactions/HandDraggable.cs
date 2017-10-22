@@ -34,7 +34,8 @@ namespace HoloToolkit.Unity.InputModule
             Default,
             LockObjectRotation,
             OrientTowardUser,
-            OrientTowardUserAndKeepUpright
+            OrientTowardUserAndKeepUpright, 
+            Dont
         }
 
         public RotationModeEnum RotationMode = RotationModeEnum.Default;
@@ -175,7 +176,11 @@ namespace HoloToolkit.Unity.InputModule
                 StopDragging();
             }
         }
-
+        public void DragStart()
+        {
+            this.SetDragging(!IsDraggingEnabled);
+            Debug.Log("Toggle Dragging");
+        }
         /// <summary>
         /// Update the position of the object being dragged.
         /// </summary>
@@ -209,6 +214,8 @@ namespace HoloToolkit.Unity.InputModule
             {
                 draggingRotation = HostTransform.rotation;
             }
+            else if (RotationMode == RotationModeEnum.Dont)
+            { }
             else // RotationModeEnum.Default
             {
                 Vector3 objForward = cameraTransform.TransformDirection(objRefForward); // in world space

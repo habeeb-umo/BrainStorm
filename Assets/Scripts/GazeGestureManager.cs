@@ -76,4 +76,18 @@ public class GazeGestureManager : MonoBehaviour
             FocusedObject.SendMessageUpwards("EditBubbleContents");
         }
     }
+    public void MoveNodeStart()
+    {
+        if (FocusedObject != null)
+        {
+            FocusedObject.SendMessageUpwards("StartMovment");
+        }
+    }
+    public void DeleteNode()
+    {
+        if (FocusedObject != null)
+        {
+            FocusedObject.SendMessageUpwards("DeleteThisNode");
+        }
+    }
 }

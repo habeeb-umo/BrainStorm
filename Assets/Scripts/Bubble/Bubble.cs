@@ -60,14 +60,16 @@ public class Bubble : MonoBehaviour, IDictationHandler
     public void StartRecording()
     {
         isRecording = true;
-        this.Contents = "...";
+        this.Contents = " ... ";
         this.gameObject.transform.Find("Text").GetComponent<Text>().text = Contents;
+      //  Debug.Log("Recording Started");
         StartCoroutine(DictationInputManager.StartRecording(initialSilenceTimeout, autoSilenceTimeout, recordingTime));
     }
 
     public void StopRecording()
     {
         isRecording = false;
+       // Debug.Log("Recording Ended");
         StartCoroutine(DictationInputManager.StopRecording());
     }
 

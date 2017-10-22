@@ -241,7 +241,7 @@ namespace HoloToolkit.Unity
                 EditorUserBuildSettings.wsaGenerateReferenceProjects && !RestoreNugetPackages(nugetPath, storePath + "/GeneratedProjects/UWP/Assembly-CSharp") ||
                 EditorUserBuildSettings.wsaGenerateReferenceProjects && !RestoreNugetPackages(nugetPath, storePath + "/GeneratedProjects/UWP/Assembly-CSharp-firstpass"))
             {
-                Debug.LogError("Failed to restore nuget packages");
+                //Debug.LogError("Failed to restore nuget packages");
                 EditorUtility.ClearProgressBar();
                 return false;
             }
