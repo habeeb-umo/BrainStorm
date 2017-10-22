@@ -201,7 +201,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -217,7 +216,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -253,13 +251,6 @@ MonoBehaviour:
   Axis0Destination: 3
   Axis1Destination: 0
   Axis2Destination: 6
-  lastMousePosition: {x: 0, y: 0, z: 0}
-  isMouseJumping: 0
-  appHasFocus: 1
-  usingMouse: 0
-  inputManagerAxesNeedApproval: 1
-  inputManagerHorizontalAxisApproved: 0
-  inputManagerVerticalAxisApproved: 0
 --- !u!114 &114821726498339338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -272,7 +263,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 18
-  appHasFocus: 1
 --- !u!114 &114905378934476236
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -295,28 +285,14 @@ MonoBehaviour:
   SelectButtonControl: {fileID: 114821726498339338}
   MenuButtonControl: {fileID: 0}
   GraspControl: {fileID: 0}
-  ActiveControllerColor:
-    r: 0.29803923
-    g: 0.5019608
-    b: 0.8509804
-    a: 1
-  DroppedControllerColor:
-    r: 0.39607844
-    g: 0.4
-    b: 0.4
-    a: 0.4
+  ActiveControllerColor: {r: 0.29803923, g: 0.5019608, b: 0.8509804, a: 1}
+  DroppedControllerColor: {r: 0.39607844, g: 0.4, b: 0.4, a: 0.4}
   VisualizeController: 1
   ControllerVisualizer: {fileID: 1721101519734500}
   HandUpTexture: {fileID: 2800000, guid: 778e02a60d620bb419088e692a3584d3, type: 3}
   HandDownTexture: {fileID: 2800000, guid: d84aac8e3bc8fe344b50dab1e7382ad7, type: 3}
   ShowPointingRay: 0
-  <ControllerInView>k__BackingField: 0
   InitialPosition: {x: 0, y: 0, z: 0}
-  localPosition: {x: 0, y: 0, z: 0}
-  localRotation: {x: 0, y: 0, z: 0}
-  visualRenderer: {fileID: 0}
-  mainTexId: 0
-  timeBeforeReturn: 0
 --- !u!114 &114940059561914556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,7 +305,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonType: 18
-  appHasFocus: 1
 --- !u!114 &114982721091039454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -361,10 +336,6 @@ MonoBehaviour:
     ManipulationInProgress: 0
     HoldInProgress: 0
     CumulativeDelta: {x: 0, y: 0, z: 0}
-  controllerId: 0
-  manualController: {fileID: 0}
-  currentlyVisible: 0
-  visibilityChanged: 0
   manipulationStartMovementThreshold: 0.03
 --- !u!114 &114983783085117614
 MonoBehaviour:
@@ -386,10 +357,3 @@ MonoBehaviour:
   Axis0Destination: 4
   Axis1Destination: 6
   Axis2Destination: 6
-  lastMousePosition: {x: 0, y: 0, z: 0}
-  isMouseJumping: 0
-  appHasFocus: 1
-  usingMouse: 0
-  inputManagerAxesNeedApproval: 1
-  inputManagerHorizontalAxisApproved: 0
-  inputManagerVerticalAxisApproved: 0
