@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 23091222440831880}
   - component: {fileID: 114063636599676604}
   - component: {fileID: 114879545938739348}
+  - component: {fileID: 114980982240973578}
+  - component: {fileID: 114330144482290556}
   m_Layer: 0
   m_Name: BubbleSphere
   m_TagString: Untagged
@@ -165,6 +167,7 @@ GameObject:
   - component: {fileID: 114885314092904280}
   - component: {fileID: 114067335294041256}
   - component: {fileID: 114657304552574844}
+  - component: {fileID: 114466051377327256}
   m_Layer: 5
   m_Name: Node
   m_TagString: Untagged
@@ -546,6 +549,23 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: H
+--- !u!114 &114330144482290556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241645227353720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbad991a9894486418e4988222483ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultGazeDistance: 2
+  PlaceParentOnTap: 1
+  ParentGameObjectToPlace: {fileID: 1442035970682840}
+  IsBeingPlaced: 0
+  AllowMeshVisualizationControl: 1
+  UseColliderCenter: 0
 --- !u!114 &114386578814813226
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -600,6 +620,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114466051377327256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1442035970682840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ef5a584cc22ec43be93ee1ecae3ae8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  Contents: 
 --- !u!114 &114553353440328996
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -865,6 +898,26 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114980982240973578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1241645227353720}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb69de839bd015f4099b5bd2c45e53e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseUnscaledTime: 1
+  PositionPerSecond: 30
+  RotationDegreesPerSecond: 720
+  RotationSpeedScaler: 0
+  ScalePerSecond: 5
+  SmoothLerpToTarget: 0
+  SmoothPositionLerpRatio: 0.5
+  SmoothRotationLerpRatio: 0.5
+  SmoothScaleLerpRatio: 0.5
 --- !u!135 &135198805386878840
 SphereCollider:
   m_ObjectHideFlags: 1
