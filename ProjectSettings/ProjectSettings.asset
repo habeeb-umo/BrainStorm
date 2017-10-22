@@ -532,7 +532,8 @@ PlayerSettings:
   scriptingDefineSymbols:
     14: 
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Metro: 2
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 0
@@ -562,10 +563,11 @@ PlayerSettings:
   metroSplashScreenUseBackgroundColor: 0
   platformCapabilities:
     WindowsStoreApps:
+      HumanInterfaceDevice: False
       InternetClient: False
-      InternetClientServer: False
+      InternetClientServer: True
       Microphone: True
-      PrivateNetworkClientServer: False
+      PrivateNetworkClientServer: True
       SpatialPerception: True
       WebCam: False
   metroFTAName: 

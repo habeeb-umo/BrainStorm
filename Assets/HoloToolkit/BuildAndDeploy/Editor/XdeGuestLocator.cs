@@ -61,7 +61,7 @@ namespace HoloToolkit.Unity
                 }
                 catch (Exception)
                 {
-                    UnityEngine.Debug.LogError("Failed to locate internal switch adapter");
+                    //UnityEngine.Debug.LogError("Failed to locate internal switch adapter");
                 }
 
                 if (internalSwitchAddressInfo != null)

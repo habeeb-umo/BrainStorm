@@ -10,6 +10,8 @@ GameObject:
   - component: {fileID: 475158}
   - component: {fileID: 114000012667812730}
   - component: {fileID: 114835164397381706}
+  - component: {fileID: 114269684019653818}
+  - component: {fileID: 114184920234460356}
   m_Layer: 0
   m_Name: Sharing
   m_TagString: Untagged
@@ -53,7 +55,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ClientRole: 0
-  ServerAddress: localhost
+  ServerAddress: 129.82.31.84
   defaultSessionName: DefaultSession
   defaultRoomName: DefaultRoom
   KeepRoomAlive: 0
@@ -62,7 +64,31 @@ MonoBehaviour:
   AutoDiscoverServer: 0
   PingIntervalSec: 2
   IsAudioEndpoint: 1
-  ShowDetailedLogs: 1
+  ShowDetailedLogs: 0
+--- !u!114 &114184920234460356
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ea9b56756ce4549ac9331b03af784f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnablePrefabs: []
+--- !u!114 &114269684019653818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 163528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa5da1314a4aa745a5be3f0f6ab6bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Timeout: 1
 --- !u!114 &114835164397381706
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -76,3 +102,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AnchorDebugText: {fileID: 0}
   ShowDetailedLogs: 1
+  PersistentAnchors: 0
