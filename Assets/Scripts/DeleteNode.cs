@@ -10,8 +10,8 @@ public class DeleteNode : MonoBehaviour {
 		
         exp.Play();
 		partgo.GetComponent<MeshRenderer>().enabled = false;
-		this.gameObject.transform.Find("Menu").gameObject.SetActive(false);
 		this.gameObject.transform.Find("Text").gameObject.SetActive(false);
+		this.GetComponent<AudioSource>().Play();
         Destroy(gameObject, exp.duration);
 	}
 }
