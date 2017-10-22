@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 82119676413389474}
   - component: {fileID: 114419307553573374}
   - component: {fileID: 114161949020746048}
+  - component: {fileID: 114613244975595824}
   m_Layer: 5
   m_Name: Node
   m_TagString: Untagged
@@ -593,7 +594,7 @@ MonoBehaviour:
   LinkedBubbles: []
   initialSilenceTimeout: 2
   autoSilenceTimeout: 3
-  recordingTime: 2
+  recordingTime: 3
   recordLight: {fileID: 0}
 --- !u!114 &114424321910645086
 MonoBehaviour:
@@ -680,6 +681,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 1876723993429162}
   active: 0
+--- !u!114 &114613244975595824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116940419399624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271998143bf79824d81dae608badb9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Node1: {fileID: 0}
+  Node2: {fileID: 0}
+  isLinkInProgress: 0
+  LinkLine: {fileID: 0}
+  soundGO: {fileID: 0}
 --- !u!114 &114626249119414722
 MonoBehaviour:
   m_ObjectHideFlags: 1
