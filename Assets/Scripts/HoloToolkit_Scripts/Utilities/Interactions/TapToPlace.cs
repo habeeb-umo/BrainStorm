@@ -126,16 +126,26 @@ namespace HoloToolkit.Unity.InputModule
             interpolator.SetTargetPosition(placementPosition);
 
             // Rotate this object to face the user.
-            interpolator.SetTargetRotation(Quaternion.Euler(0, cameraTransform.localEulerAngles.y, 0));
+           // interpolator.SetTargetRotation(Quaternion.Euler(0, cameraTransform.localEulerAngles.y, 0));
         }
 
         public virtual void OnInputClicked(InputClickedEventData eventData)
         {
             // On each tap gesture, toggle whether the user is in placing mode.
-            IsBeingPlaced = !IsBeingPlaced;
-            HandlePlacement();
+            if (IsBeingPlaced)
+            {
+                IsBeingPlaced = false;
+                StopPlacing();
+            }
         }
-
+        public void StartMovment()
+        {
+            if (!IsBeingPlaced)
+            {
+                IsBeingPlaced = true;
+                StartPlacing();
+            }
+       }
         private void HandlePlacement()
         {
             if (IsBeingPlaced)
@@ -147,7 +157,7 @@ namespace HoloToolkit.Unity.InputModule
                 StopPlacing();
             }
         }
-        private void StartPlacing()
+        public void StartPlacing()
         {
             var layerCacheTarget = PlaceParentOnTap ? ParentGameObjectToPlace : gameObject;
             layerCacheTarget.SetLayerRecursively(IgnoreRaycastLayer, out layerCache);

@@ -226,7 +226,7 @@ MonoBehaviour:
 RectTransform:
   m_PrefabParentObject: {fileID: 224771055216706674, guid: e1bddf0ff20095343a884dd3d7d96bd0,
     type: 2}
-  m_PrefabInternal: {fileID: 932015598}
+  m_PrefabInternal: {fileID: 782970256}
 --- !u!1 &366508176
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,7 +504,12 @@ MonoBehaviour:
   Stabilizer: {fileID: 654131390}
   GazeTransform: {fileID: 0}
   DebugDrawRay: 0
---- !u!1001 &932015598
+--- !u!4 &750965056 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011792100794, guid: a611e772ef8ddf64d8106a9cbb70f31c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1285410332}
+--- !u!1001 &782970256
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -692,7 +697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BubbleObject: {fileID: 1116940419399624, guid: e1bddf0ff20095343a884dd3d7d96bd0,
     type: 2}
-  soundGO: {fileID: 0}
+  soundGO: {fileID: 1671527941}
 --- !u!114 &1184672797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -720,13 +725,12 @@ MonoBehaviour:
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 114419307553573374, guid: e1bddf0ff20095343a884dd3d7d96bd0,
-            type: 2}
-          m_MethodName: StartRecording
-          m_Mode: 1
+        - m_Target: {fileID: 1184672796}
+          m_MethodName: InstantiateNewBubble
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 750965056}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -738,12 +742,46 @@ MonoBehaviour:
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1184672795}
-          m_MethodName: 
+        - m_Target: {fileID: 1184672799}
+          m_MethodName: CallEditNode
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Keyword: Move Node
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1184672799}
+          m_MethodName: MoveNodeStart
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Keyword: Delete Node
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1184672799}
+          m_MethodName: DeleteNode
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -796,6 +834,10 @@ MonoBehaviour:
     KeyCode: 97
   - Keyword: Edit Contents
     KeyCode: 101
+  - Keyword: Move Node
+    KeyCode: 109
+  - Keyword: Delete Node
+    KeyCode: 100
   recognitionConfidenceLevel: 1
 --- !u!1001 &1285410332
 Prefab:
@@ -895,7 +937,7 @@ Camera:
     height: 1
   near clip plane: 0.4
   far clip plane: 1000
-  field of view: 60
+  field of view: 20
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -949,7 +991,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1671527941}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1355044897}
@@ -977,7 +1019,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

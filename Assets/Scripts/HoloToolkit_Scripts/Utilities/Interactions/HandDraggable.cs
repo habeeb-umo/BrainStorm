@@ -97,9 +97,8 @@ namespace HoloToolkit.Unity.InputModule
         /// <summary>
         /// Starts dragging the object.
         /// </summary>
-        public void DragStart()
+        public void StartDragging(Vector3 initialDraggingPosition)
         {
-            Vector3 initialDraggingPosition = this.transform.position;
             if (!IsDraggingEnabled)
             {
                 return;
@@ -177,7 +176,11 @@ namespace HoloToolkit.Unity.InputModule
                 StopDragging();
             }
         }
-
+        public void DragStart()
+        {
+            this.SetDragging(!IsDraggingEnabled);
+            Debug.Log("Toggle Dragging");
+        }
         /// <summary>
         /// Update the position of the object being dragged.
         /// </summary>
@@ -316,7 +319,7 @@ namespace HoloToolkit.Unity.InputModule
                 ? HostTransform.position
                 : details.Value.Point;
 
-           // DragStart();
+            StartDragging(initialDraggingPosition);
         }
 
         public void OnSourceDetected(SourceStateEventData eventData)
