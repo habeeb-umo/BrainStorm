@@ -61,4 +61,11 @@ public class GazeGestureManager : MonoBehaviour
             recognizer.StartCapturingGestures();
         }
     }
+    public void EditContents()
+    {
+        if (FocusedObject != null)
+        {
+            FocusedObject.SendMessageUpwards("EditBubbleContents");
+        }
+    }
 }
