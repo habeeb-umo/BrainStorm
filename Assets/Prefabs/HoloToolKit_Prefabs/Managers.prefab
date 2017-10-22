@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4934741451718812}
   - component: {fileID: 114119907411977246}
-  - component: {fileID: 114149538779152716}
   m_Layer: 0
   m_Name: GesturesInput
   m_TagString: Untagged
@@ -221,23 +220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RecognizerStart: 0
   UseRailsNavigation: 0
---- !u!114 &114149538779152716
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1004899629213496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef7d866386841064db13b68ce22de4d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GamePadButtonA: Fire1
-  GamePadId: 50000
-  HoldStartedInterval: 2
-  HoldCompletedInterval: 3
-  NavigateAroundXAxisName: CONTROLLER_LEFT_STICK_HORIZONTAL
-  NavigateAroundYAxisName: CONTROLLER_RIGHT_STICK_HORIZONTAL
 --- !u!114 &114209566806921312
 MonoBehaviour:
   m_ObjectHideFlags: 1
