@@ -998,6 +998,11 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &750965056 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4000011792100794, guid: a611e772ef8ddf64d8106a9cbb70f31c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1285410332}
 --- !u!1 &872168109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1058,7 @@ GameObject:
   - component: {fileID: 1184672798}
   - component: {fileID: 1184672797}
   - component: {fileID: 1184672796}
+  - component: {fileID: 1184672801}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1105,7 +1111,7 @@ MonoBehaviour:
           m_MethodName: InstantiateNewBubble
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgument: {fileID: 750965056}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -1158,6 +1164,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184672801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1184672795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c62fd7a55ba7458499b69cae18f83806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PersistentKeywords: 1
+  RecognizerStart: 0
+  Keywords:
+  - Keyword: Add Node
+    KeyCode: 97
+  - Keyword: Edit Contents
+    KeyCode: 101
+  recognitionConfidenceLevel: 1
 --- !u!1 &1234723653
 GameObject:
   m_ObjectHideFlags: 0
