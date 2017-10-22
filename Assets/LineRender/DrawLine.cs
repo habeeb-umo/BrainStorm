@@ -5,23 +5,25 @@ using UnityEngine;
 public class DrawLine : MonoBehaviour {
 
 	private LineRenderer lineRenderer;
-	private float counter;
+	private float counter = 0f;
 	private float dist;
 
     private bool isSet = false;
 
-	public Vector3 origin;
-	public Vector3 destination;
+	public Vector3 origin = Vector3.zero;
+	public Vector3 destination = Vector3.zero;
 
 	public float lineDrawSpeed = 6f;
 
-	void Start ()
+	public void Awake ()
     {
-
-	}
-	
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.SetPosition(0, origin);
+        lineRenderer.SetPosition(1, destination);
+    }
+	/*
 	void Update () {
-        if (origin != null && destination != null)
+        if (origin != null && destination != null)s
         {
             if (!isSet)
             {
@@ -30,10 +32,13 @@ public class DrawLine : MonoBehaviour {
 
                 dist = Vector3.Distance(origin, destination);
                 isSet = true;
+                Debug.Log("set");
             }
-            if (counter < dist)
+            if (counter < 1)
             {
+                Debug.Log("Drawing");
                 counter += .1f / lineDrawSpeed;
+                Debug.Log(counter);
                 float x = Mathf.Lerp(0, dist, counter);
 
                 Vector3 pointA = origin;
@@ -41,8 +46,9 @@ public class DrawLine : MonoBehaviour {
 
                 Vector3 pointAlongLine = x * Vector3.Normalize(pointB - pointA) + pointA;
 
-                lineRenderer.SetPosition(1, pointAlongLine);
+               
+                
             }
         }
-	}
+	}*/
 }

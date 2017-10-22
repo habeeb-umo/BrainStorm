@@ -796,7 +796,8 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.006
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: e1bddf0ff20095343a884dd3d7d96bd0, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1184672795
@@ -894,8 +895,8 @@ MonoBehaviour:
     Response:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1764898950}
-          m_MethodName: LinkStart
+        - m_Target: {fileID: 1184672799}
+          m_MethodName: CallLinkNodeStart
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -905,6 +906,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+  - Keyword: Debug Select
+    Response:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1184672799}
+          m_MethodName: SelectCurrent
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 1
       m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
   IsGlobalListener: 1
@@ -955,6 +973,8 @@ MonoBehaviour:
     KeyCode: 101
   - Keyword: Link Node
     KeyCode: 108
+  - Keyword: Debug Select
+    KeyCode: 115
   recognitionConfidenceLevel: 1
 --- !u!1001 &1285410332
 Prefab:
@@ -1127,12 +1147,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ee0563eb0f60eb47ac0750f6a6644be, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1764898950 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114419307553573374, guid: e1bddf0ff20095343a884dd3d7d96bd0,
-    type: 2}
-  m_PrefabInternal: {fileID: 932015598}
-  m_Script: {fileID: 11500000, guid: e8a5b7be02bad204c94b67713e2ca588, type: 3}
 --- !u!1 &1900725046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,6 +1155,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1900725047}
+  - component: {fileID: 1900725048}
   m_Layer: 0
   m_Name: Bubbles
   m_TagString: Untagged
@@ -1162,3 +1177,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900725048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1900725046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271998143bf79824d81dae608badb9f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Node1: {fileID: 0}
+  Node2: {fileID: 0}
+  isLinkInProgress: 0
+  LinkLine: {fileID: 0}
+  soundGO: {fileID: 0}

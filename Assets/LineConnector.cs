@@ -8,6 +8,7 @@ public class LineConnector : MonoBehaviour {
 	
     public void Connect(GameObject a, GameObject b)
     {
+    
         var AtoB = (b.transform.position - a.transform.position);
         var distAB = AtoB.magnitude;
         Vector3 posA = a.transform.position + ((AtoB / distAB) * (a.transform.Find("Text").GetComponent<RectTransform>().rect.width / 2));
@@ -15,9 +16,14 @@ public class LineConnector : MonoBehaviour {
         var BtoA = (a.transform.position - b.transform.position);
         var distBA = BtoA.magnitude;
         Vector3 posB = a.transform.position + ((BtoA / distBA) * (b.transform.Find("Text").GetComponent<RectTransform>().rect.width / 2));
+  
         GameObject go = Instantiate(LinePrefab, this.transform);
-        go.GetComponent<DrawLine>().origin = posA;
-        go.GetComponent<DrawLine>().destination = posB;
+        go.GetComponent<DrawLine>().origin = a.transform.position;
+        go.GetComponent<DrawLine>().destination = b.transform.position;
+        go.GetComponent<DrawLine>().enabled = true;
+        go.GetComponent<LineRenderer>().enabled = true;
+        go.GetComponent<DrawLine>().Awake();
+
     }
     // Update is called once per frame
     void Update () {

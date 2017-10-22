@@ -47,7 +47,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1982596805219550}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2d1b61a131e88945b652b24e7d8c8c1, type: 3}
   m_Name: 
@@ -61,7 +61,7 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1982596805219550}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -95,7 +95,7 @@ LineRenderer:
   - {x: -4.52, y: -2.067426, z: -1.33}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 0.08
+    widthMultiplier: 0.02
     widthCurve:
       serializedVersion: 2
       m_Curve:

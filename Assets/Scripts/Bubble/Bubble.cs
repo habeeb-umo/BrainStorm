@@ -8,12 +8,12 @@ public class Bubble : MonoBehaviour, IDictationHandler
     public string Contents;
     public Text textRenderer;
     public List<Bubble> LinkedBubbles;
-    private static NodeConnector connector;
+    private NodeConnector connector;
 
-
-    void OnStart()
+    void Start()
     {
         this.textRenderer = this.gameObject.transform.Find("Text").GetComponent<Text>();
+        this.connector = GameObject.Find("Bubbles").GetComponent<NodeConnector>();
     }
 
     public void EditBubbleContents()
@@ -21,6 +21,7 @@ public class Bubble : MonoBehaviour, IDictationHandler
         Debug.Log("Editing Contents...");
         StartRecording();
     }
+
     [SerializeField]
     [Range(0.1f, 5f)]
     [Tooltip("The time length in seconds before dictation recognizer session ends due to lack of audio input in case there was no audio heard in the current session.")]
@@ -94,28 +95,37 @@ public class Bubble : MonoBehaviour, IDictationHandler
 
     public void LinkStart()
     {
-        connector = new NodeConnector();
         connector.Node1 = this;
         connector.isLinkInProgress = true;
-        Debug.Log("Start node called on " + this.Contents);
+        Debug.Log("Start node called on " + this.gameObject.name);
     }
 
     public void LinkEnd()
     {
-        if (null == connector) return;
+        Debug.Log("End node called on " + this.gameObject.name);
 
+        if (connector.Node1 == null)
+        {
+            Debug.LogWarning("Node1 or Node2 is empty");
+            return;
+        }
         connector.Node2 = this;
         connector.ConnectNodes();
         Debug.Log("Nodes " + connector.Node1.Contents + " and " + connector.Node2.Contents + " CONNECTED!");
-        connector = null;
-        
+        connector.isLinkInProgress = false;
+        connector.ResetNodesToNull();
     }
 
     public void OnSelect()
     {
-        if(connector.isLinkInProgress)
+        Debug.Log("OnSelect Called Node");
+        if (connector.Node1 != null)
         {
-            this.LinkEnd();
+            Debug.Log("Not Null");
+            if (connector.isLinkInProgress)
+            {
+                this.LinkEnd();
+            }
         }
     }
 }
