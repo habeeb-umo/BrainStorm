@@ -3,10 +3,10 @@ using UnityEngine.XR.WSA.Input;
 
 public class GazeGestureManager : MonoBehaviour
 {
-    public static GazeGestureManager Instance { get; private set; }
+    public static GazeGestureManager Instance { get; set; }
 
     // Represents the hologram that is currently being gazed at.
-    public GameObject FocusedObject { get; private set; }
+    public GameObject FocusedObject { get; set; }
 
     GestureRecognizer recognizer;
 

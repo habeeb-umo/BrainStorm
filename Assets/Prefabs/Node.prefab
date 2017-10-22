@@ -146,6 +146,8 @@ GameObject:
   - component: {fileID: 114019502265199086}
   - component: {fileID: 82920740264275528}
   - component: {fileID: 114947849597666986}
+  - component: {fileID: 114640901270250510}
+  - component: {fileID: 114251499416808486}
   m_Layer: 5
   m_Name: Node
   m_TagString: Untagged
@@ -527,6 +529,17 @@ MonoBehaviour:
   scaleStart: {x: 1, y: 1, z: 1}
   a: {x: 355.2, y: 355.2, z: 355.2}
   b: {x: 35.52, y: 35.52, z: 35.52}
+--- !u!114 &114251499416808486
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670918790728246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9eef9117d843b40bd7b198ccdc1c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114278037485855294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -601,6 +614,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menu: {fileID: 1320201370544536}
   active: 0
+--- !u!114 &114640901270250510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1670918790728246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c155818a6c07c8141b1292d33bf15058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AnchorLanding: {fileID: 0}
+  AnchorLooping: {fileID: 0}
+  PlacingMaterial: {fileID: 0}
+  PlacedMaterial: {fileID: 0}
 --- !u!114 &114729288251453012
 MonoBehaviour:
   m_ObjectHideFlags: 1
