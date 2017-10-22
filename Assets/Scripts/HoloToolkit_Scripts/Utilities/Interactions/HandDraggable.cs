@@ -35,7 +35,7 @@ namespace HoloToolkit.Unity.InputModule
             LockObjectRotation,
             OrientTowardUser,
             OrientTowardUserAndKeepUpright
-        }
+        } 
 
         public RotationModeEnum RotationMode = RotationModeEnum.Default;
 
@@ -51,7 +51,7 @@ namespace HoloToolkit.Unity.InputModule
 
         private bool isDragging;
         private bool isGazed;
-        private Vector3 objRefForward;
+        private Vector3 objRefForward; 
         private Vector3 objRefUp;
         private float objRefDistance;
         private Quaternion gazeAngularOffset;
