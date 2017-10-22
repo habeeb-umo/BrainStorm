@@ -60,6 +60,8 @@ public class Bubble : MonoBehaviour, IDictationHandler
     public void StartRecording()
     {
         isRecording = true;
+        this.Contents = "...";
+        this.gameObject.transform.Find("Text").GetComponent<Text>().text = Contents;
         StartCoroutine(DictationInputManager.StartRecording(initialSilenceTimeout, autoSilenceTimeout, recordingTime));
     }
 
