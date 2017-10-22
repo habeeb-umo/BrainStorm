@@ -589,10 +589,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Contents: 
-  initialSilenceTimeout: 5
-  autoSilenceTimeout: 9
-  recordingTime: 10
-  speechToTextOutput: {fileID: 0}
+  textRenderer: {fileID: 114980551606343214}
+  LinkedBubbles: []
+  initialSilenceTimeout: 2
+  autoSilenceTimeout: 3
+  recordingTime: 2
   recordLight: {fileID: 0}
 --- !u!114 &114424321910645086
 MonoBehaviour:
@@ -837,7 +838,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' The Cake Is A Lie '
+  m_Text: New Bubble
 --- !u!135 &135069285528526122
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -4419,7 +4420,7 @@ RectTransform:
   m_GameObject: {fileID: 1116940419399624}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
   m_LocalPosition: {x: 0, y: -3, z: 3.62}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
   m_Children:
   - {fileID: 4465457853585736}
   - {fileID: 224724917116441494}

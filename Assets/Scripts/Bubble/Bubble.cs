@@ -9,8 +9,7 @@ public class Bubble : MonoBehaviour, IDictationHandler
     public Text textRenderer;
     public List<Bubble> LinkedBubbles;
     private static NodeConnector connector;
-    [SerializeField]
-    public static LineRenderer ConnectionLine;
+
 
     void OnStart()
     {

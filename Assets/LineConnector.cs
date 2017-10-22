@@ -18,7 +18,6 @@ public class LineConnector : MonoBehaviour {
         GameObject go = Instantiate(LinePrefab, this.transform);
         go.GetComponent<DrawLine>().origin = posA;
         go.GetComponent<DrawLine>().destination = posB;
-
     }
     // Update is called once per frame
     void Update () {

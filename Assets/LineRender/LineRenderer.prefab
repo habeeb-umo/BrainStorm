@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4441941967628140}
   - component: {fileID: 120442710750397740}
-  - component: {fileID: 114037368431338068}
+  - component: {fileID: 114567539467706294}
   m_Layer: 0
   m_Name: LineRenderer
   m_TagString: Untagged
@@ -41,7 +41,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114037368431338068
+--- !u!114 &114567539467706294
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2d1b61a131e88945b652b24e7d8c8c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {fileID: 0}
-  destination: {fileID: 0}
+  origin: {x: 0, y: 0, z: 0}
+  destination: {x: 0, y: 0, z: 0}
   lineDrawSpeed: 6
 --- !u!120 &120442710750397740
 LineRenderer:
