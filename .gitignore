@@ -5,6 +5,8 @@
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 BrainStorm/Temp/UnityLockfile
+UWP/
+Builds/
 
 # Visual Studio 2015 cache directory
 /.vs/
