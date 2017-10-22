@@ -635,7 +635,7 @@ MonoBehaviour:
   Name: 
   Contents: 
   initialSilenceTimeout: 5
-  autoSilenceTimeout: 15
+  autoSilenceTimeout: 5
   recordingTime: 10
   speechToTextOutput: {fileID: 0}
   recordLight: {fileID: 0}
@@ -654,7 +654,7 @@ MonoBehaviour:
   DistanceScale: 2
   RotationMode: 3
   PositionLerpSpeed: 0.2
-  RotationLerpSpeed: 0.2
+  RotationLerpSpeed: 0.01
   IsDraggingEnabled: 1
 --- !u!114 &114553353440328996
 MonoBehaviour:
@@ -927,7 +927,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1241645227353720}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb69de839bd015f4099b5bd2c45e53e5, type: 3}
   m_Name: 
