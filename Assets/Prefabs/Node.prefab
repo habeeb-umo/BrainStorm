@@ -182,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 1051152814734494}
   m_LocalRotation: {x: 0.010790189, y: -0.3739644, z: 0.015852703, w: 0.9272448}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 35.52, y: 35.52, z: 35.52}
+  m_LocalScale: {x: 115, y: 115, z: 115}
   m_Children: []
   m_Father: {fileID: 224771055216706674}
   m_RootOrder: 0
@@ -608,8 +608,8 @@ MonoBehaviour:
   text: {fileID: 224724917116441494}
   addition: -20
   scaleStart: {x: 1, y: 1, z: 1}
-  a: {x: 355.2, y: 355.2, z: 355.2}
-  b: {x: 35.52, y: 35.52, z: 35.52}
+  a: {x: 1150, y: 1150, z: 1150}
+  b: {x: 115, y: 115, z: 115}
 --- !u!114 &114432415293537176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,7 +663,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114419307553573374}
+        m_MethodName: StartRecording
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: HoloUIPressedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114607645396386334
@@ -736,7 +747,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onSelected:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 114161949020746048}
+        m_MethodName: DragStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: DragStart
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: HoloUIPressedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
 --- !u!114 &114760877766359134
