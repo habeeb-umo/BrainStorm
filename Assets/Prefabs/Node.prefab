@@ -50,6 +50,8 @@ GameObject:
   - component: {fileID: 82119676413389474}
   - component: {fileID: 114419307553573374}
   - component: {fileID: 114161949020746048}
+  - component: {fileID: 114185049240778392}
+  - component: {fileID: 114241480444142500}
   m_Layer: 5
   m_Name: Node
   m_TagString: Untagged
@@ -460,7 +462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5a0a60fbe897549ad0bfe2039f12b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HostTransform: {fileID: 0}
+  HostTransform: {fileID: 224771055216706674}
   DistanceScale: 2
   RotationMode: 0
   PositionLerpSpeed: 0.2
@@ -482,6 +484,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: HoloUIPressedEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
+--- !u!114 &114185049240778392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116940419399624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac9eef9117d843b40bd7b198ccdc1c61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114194972081115708
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -496,6 +509,20 @@ MonoBehaviour:
   activeSprites:
   - {fileID: 21300000, guid: 68150cad085c27f419a8a9ee3e306fb8, type: 3}
   - {fileID: 21300000, guid: b2b492bc3e37b9b468dfc62fa5b02a40, type: 3}
+--- !u!114 &114241480444142500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116940419399624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 722717aa092cb4a4cb8cde6fb8168f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FadeDistanceStart: 0.85
+  FadeDistanceEnd: 0.5
+  NearPlaneFadeOn: 1
 --- !u!114 &114358487557469748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -590,8 +617,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Contents: 
   initialSilenceTimeout: 5
-  autoSilenceTimeout: 9
-  recordingTime: 10
+  autoSilenceTimeout: 5
+  recordingTime: 5
   speechToTextOutput: {fileID: 0}
   recordLight: {fileID: 0}
 --- !u!114 &114424321910645086
@@ -4417,8 +4444,8 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116940419399624}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: -3, z: 3.62}
+  m_LocalRotation: {x: -0, y: 0.9980676, z: 0.062137436, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4465457853585736}
@@ -4428,6 +4455,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 53.6644, y: 55.4006}
   m_Pivot: {x: 0.5, y: 0.5}
