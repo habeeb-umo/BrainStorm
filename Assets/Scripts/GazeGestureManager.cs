@@ -27,8 +27,6 @@ public class GazeGestureManager : MonoBehaviour
             }
         };
 
-
-
         recognizer.StartCapturingGestures();
     }
 
