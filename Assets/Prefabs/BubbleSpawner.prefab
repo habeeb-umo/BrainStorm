@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4516101421716324}
-  - component: {fileID: 114185904279689140}
+  - component: {fileID: 114168389694862732}
   m_Layer: 0
   m_Name: BubbleSpawner
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114185904279689140
+--- !u!114 &114168389694862732
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -48,8 +48,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288982976111194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c8ecd9e415e507469d5d7353d01041c, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b4af9ca730775f408873b09bbcc58ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BubbleObject: {fileID: 1442035970682840, guid: e1bddf0ff20095343a884dd3d7d96bd0,
+  BubbleObject: {fileID: 1116940419399624, guid: e1bddf0ff20095343a884dd3d7d96bd0,
     type: 2}
