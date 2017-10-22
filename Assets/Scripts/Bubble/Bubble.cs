@@ -33,6 +33,7 @@ public class Bubble : MonoBehaviour, IDictationHandler
 
     public void EditBubbleContents()
     {
+        Debug.Log("Editing Contents...");
         textToChange = BubbleTextField.Contents;
         StartRecording();
     }
