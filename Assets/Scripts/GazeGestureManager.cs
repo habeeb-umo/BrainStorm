@@ -48,6 +48,10 @@ public class GazeGestureManager : MonoBehaviour
         {
             // If the raycast hit a hologram, use that as the focused object.
             FocusedObject = hitInfo.collider.gameObject;
+            if (FocusedObject == oldFocusObject)
+            {
+                FocusedObject.SendMessageUpwards("OnLookedAt");
+            }
         }
         else
         {
@@ -59,6 +63,10 @@ public class GazeGestureManager : MonoBehaviour
         // start detecting fresh gestures again.
         if (FocusedObject != oldFocusObject)
         {
+            if (oldFocusObject != null)
+            {
+                oldFocusObject.SendMessageUpwards("OnUnLookedAt");
+            }
             recognizer.CancelGestures();
             recognizer.StartCapturingGestures();
         }

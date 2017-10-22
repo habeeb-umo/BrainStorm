@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class showMenu : MonoBehaviour {
     public GameObject menu;
+    public bool active = false;
 	void OnSelect()
     {
-        menu.SetActive(true);
-    }
-    public void hideMenu()
-    {
-        menu.SetActive(false);
+        menu.SetActive(!active);
+        active = !active;
     }
 }

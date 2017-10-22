@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class highlightButton : MonoBehaviour {
-
-	public Sprite sctiveSprites[2];
-	bool Active = false;
+public class IgnoreLookAt : MonoBehaviour {
 
 	void OnLookedAt()
+	{
+
+	}
+	void OnUnLookedAt()
 	{
 		
 	}
