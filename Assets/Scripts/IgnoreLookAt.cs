@@ -12,4 +12,8 @@ public class IgnoreLookAt : MonoBehaviour {
 	{
 		
 	}
+    void EditBubbleContents()
+    {
+
+    }
 }
