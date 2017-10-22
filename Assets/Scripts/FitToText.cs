@@ -18,7 +18,7 @@ public class FitToText : MonoBehaviour {
         float height = text.rect.height + addition;
         a = scaleStart * height;
         b = a / 10;
-        this.transform.localScale = a;
+        this.transform.localScale = b;
         this.gameObject.GetComponent<ParticleSystem>().shape.scale.Set((b.x), (b.y), (b.z));
         
     }
