@@ -44,6 +44,7 @@ namespace HoloToolkit.Unity.InputModule
         private HoldEventData holdEventData;
         private NavigationEventData navigationEventData;
         private GamePadEventData gamePadEventData;
+        private XboxControllerEventData xboxControllerEventData;
         private SourceRotationEventData sourceRotationEventData;
         private SourcePositionEventData sourcePositionEventData;
         private PointerSpecificEventData pointerSpecificEventData;
@@ -202,6 +203,7 @@ namespace HoloToolkit.Unity.InputModule
             sourceRotationEventData = new SourceRotationEventData(EventSystem.current);
             sourcePositionEventData = new SourcePositionEventData(EventSystem.current);
             gamePadEventData = new GamePadEventData(EventSystem.current);
+            xboxControllerEventData = new XboxControllerEventData(EventSystem.current);
 #if UNITY_WSA || UNITY_STANDALONE_WIN
             speechEventData = new SpeechEventData(EventSystem.current);
             dictationEventData = new DictationEventData(EventSystem.current);
@@ -846,6 +848,26 @@ namespace HoloToolkit.Unity.InputModule
             // Pass handler through HandleEvent to perform modal/fallback logic
             HandleEvent(gamePadEventData, OnGamePadLostEventHandler);
         }
+
+        #region Xbox Controller Events
+
+        private static readonly ExecuteEvents.EventFunction<IXboxControllerHandler> OnXboxAxisUpdateHandler =
+            delegate (IXboxControllerHandler handler, BaseEventData eventData)
+            {
+                var casted = ExecuteEvents.ValidateEventData<XboxControllerEventData>(eventData);
+                handler.OnXboxAxisUpdate(casted);
+            };
+
+        public void RaiseXboxInputUpdate(IInputSource source, uint sourceId, XboxControllerData inputData)
+        {
+            // Create input event
+            xboxControllerEventData.Initialize(source, sourceId, inputData);
+
+            // Pass handler through HandleEvent to perform modal/fallback logic
+            HandleEvent(xboxControllerEventData, OnXboxAxisUpdateHandler);
+        }
+
+        #endregion // Xbox Controller Events
 
         #endregion // GamePad Events
 
