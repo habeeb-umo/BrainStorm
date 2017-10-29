@@ -7,14 +7,18 @@ public class collapseNodes : MonoBehaviour
     public GameObject nodes, lines;
     public bool collpaseActive = false, collapseDone = false;
     public Dictionary<GameObject, Vector3> stPos;
+    private void Start()
+    {
+        stPos = new Dictionary<GameObject, Vector3>();
+    }
     void OnSelect()
     {
         if (collapseDone) return;
         foreach (GameObject g in lines.transform)
             Destroy(g);
-        foreach (GameObject g in nodes.transform)
+        foreach (Transform g in nodes.transform)
         {
-            stPos.Add(g, g.transform.position);
+            stPos.Add(g.gameObject, g.position);
         }
         startTime = Time.time;
         collpaseActive = true;
@@ -32,10 +36,15 @@ public class collapseNodes : MonoBehaviour
             {
                 foreach (GameObject g in stPos.Keys)
                 {
-                    transform.position = Vector3.Lerp(stPos[g], this.gameObject.transform.position, precent);
+                    g.transform.position = Vector3.Lerp(stPos[g], this.gameObject.transform.position, precent);
                 }
             }
-            else { collapseDone = true;  }
+            else
+            {
+                foreach (GameObject g in stPos.Keys)
+                    Destroy(g);
+                collapseDone = true;
+            }
         }
     }
 

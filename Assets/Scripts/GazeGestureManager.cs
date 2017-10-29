@@ -90,4 +90,11 @@ public class GazeGestureManager : MonoBehaviour
             FocusedObject.SendMessageUpwards("DeleteThisNode");
         }
     }
+    public void SelectNode()
+    {
+        if (FocusedObject != null)
+        {
+            FocusedObject.SendMessageUpwards("OnSelect");
+        }
+    }
 }
